@@ -5,14 +5,10 @@ public class HelloWorld {
     public static void main(String[] args) {
 
 
-        System.out.println("Hello World");
+        System.out.println("Zakupy w sklepie z artykulami biurowymi");
 
         System.out.println("Wpisz wartosc kodu kreskowego.");
         System.out.println("Jesli wpiszesz END, to zakupy zostana zakonczone.");
-
-        Scanner scanner = new Scanner(System.in);
-
-        String input;
 
         ArrayList<product> lp = new ArrayList<>();
 
@@ -25,18 +21,21 @@ public class HelloWorld {
         product p4 = new product("Linijka",0.75,"5555");
         lp.add(p4);
 
+        System.out.println("Olowek(7801) Cena: 1.00zl");
+        System.out.println("Dlugopis(1234) Cena: 0.80zl");
+        System.out.println("Zeszyt(9876) Cena: 1.30zl");
+        System.out.println("Linijka(5555) Cena: 0.75zl");
+
         ArrayList<product> paragon = new ArrayList<>();
+
+        Scanner scanner = new Scanner(System.in);
+
+        String input;
 
         do{
             input = scanner.nextLine();
-            if(!znajdz(lp, input, paragon))
-            {
-                System.out.println("Produkt nieznaleziony");
-            }
-            else
-            {
-                System.out.println("Produkt dodany do paragonu");
-            }
+            if(!znajdz(lp, input, paragon)) System.out.println("Produkt nieznaleziony");
+            else System.out.println("Produkt dodany do paragonu");
         }while(!input.equals("END"));
 
         double suma = 0;
