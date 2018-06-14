@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="30V" />
+        <module name="db-connection-examples" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="db-connection-examples" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
